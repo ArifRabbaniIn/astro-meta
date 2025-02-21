@@ -1,0 +1,28 @@
+{
+  "name": "astro-meta",
+  "version": "0.0.1",
+  "description": "Easily add meta tags to your Astro app.",
+  "keywords": [
+    "astro",
+    "seo",
+    "astro-component"
+  ],
+  "author": {
+    "name": "Arif Rabbani",
+    "url": "https://github.com/arabbani"
+  },
+  "homepage": "https://github.com/arabbani/astro-meta#readme",
+  "bugs": {
+    "url": "https://github.com/arabbani/astro-meta/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arabbani/astro-meta.git"
+  },
+  "license": "MIT",
+  "type": "module",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
