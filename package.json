@@ -5,7 +5,8 @@
   "keywords": [
     "astro",
     "seo",
-    "astro-component"
+    "astro-component",
+    "withastro"
   ],
   "author": {
     "name": "Arif Rabbani",
