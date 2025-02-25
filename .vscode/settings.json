@@ -1,4 +1,12 @@
 {
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
   "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "files.trimFinalNewlines": true,
+  "html.format.indentInnerHtml": true,
+  "css.format.spaceAroundSelectorSeparator": true,
   "prettier.documentSelectors": ["**/*.astro"]
 }
