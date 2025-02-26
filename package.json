@@ -1,5 +1,5 @@
 {
-  "name": "library-name",
+  "name": "root",
   "private": true,
   "workspaces": [
     "demo",
