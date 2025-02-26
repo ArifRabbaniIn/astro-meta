@@ -1,5 +1,5 @@
 {
-  "name": "astro-meta",
+  "name": "library-name",
   "private": true,
   "workspaces": [
     "demo",
