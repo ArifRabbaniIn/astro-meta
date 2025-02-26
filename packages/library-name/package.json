@@ -1,7 +1,7 @@
 {
-  "name": "library-name",
+  "name": "astro-meta",
   "version": "1.0.0",
-  "description": "",
+  "description": "Easily add meta tags to your Astro app.",
   "license": "MIT",
   "author": "",
   "type": "commonjs",
