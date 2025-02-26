@@ -1,5 +1,5 @@
 {
-  "name": "astro-meta",
+  "name": "@codemint/astro-meta",
   "version": "1.0.0",
   "description": "Easily add meta tags to your Astro app.",
   "license": "MIT",
