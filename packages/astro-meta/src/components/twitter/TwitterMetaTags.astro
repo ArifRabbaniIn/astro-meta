@@ -1,0 +1,19 @@
+---
+import type { TwitterMetadata } from '../../types/twitter-metadata';
+import TwitterImageTags from './TwitterImageTags.astro';
+
+type Props = TwitterMetadata;
+
+const { cardType = 'summary', ...props } = Astro.props;
+---
+
+<meta name="twitter:card" content={cardType} />
+<meta name="twitter:title" content={props.title} />
+{
+  props.description ?
+    <meta name="twitter:description" content={props.description} />
+  : null
+}
+<meta name="twitter:site" content={props.site} />
+{props.creator ? <meta name="twitter:creator" content={props.creator} /> : null}
+{props.image ? <TwitterImageTags {...props.image} /> : null}
