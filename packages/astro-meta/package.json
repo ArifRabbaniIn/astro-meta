@@ -4,11 +4,12 @@
   "description": "Easily add meta tags to your Astro app.",
   "keywords": [
     "seo",
+    "optimization",
     "astro",
     "astro-component",
-    "withastro"
+    "withastro",
+    "astro-integration"
   ],
-  "license": "MIT",
   "author": {
     "name": "Arif Rabbani",
     "url": "https://github.com/arabbani"
@@ -22,6 +23,7 @@
   "bugs": {
     "url": "https://github.com/arabbani/astro-meta/issues"
   },
+  "license": "MIT",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
