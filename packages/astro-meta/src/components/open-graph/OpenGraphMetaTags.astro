@@ -1,0 +1,50 @@
+---
+import type { OpenGraphMetadata } from '../../types/open-graph-metadata';
+import OpenGraphAudioTags from './OpenGraphAudioTags.astro';
+import OpenGraphImageTags from './OpenGraphImageTags.astro';
+import OpenGraphTypePropertyTags from './OpenGraphTypePropertyTags.astro';
+import OpenGraphVideoTags from './OpenGraphVideoTags.astro';
+
+type Props = OpenGraphMetadata;
+
+const CANONICAL_URL = Astro.url.origin + Astro.url.pathname;
+
+const {
+  type = 'website',
+  canonicalUrl = CANONICAL_URL,
+  ...props
+} = Astro.props;
+---
+
+<meta property="og:title" content={props.title} />
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+{
+  props.description ?
+    <meta property="og:description" content={props.description} />
+  : null
+}
+{
+  props.siteName ?
+    <meta property="og:site_name" content={props.siteName} />
+  : null
+}
+{
+  props.determiner ?
+    <meta property="og:determiner" content={props.determiner} />
+  : null
+}
+{props.locale ? <meta property="og:locale" content={props.locale} /> : null}
+{
+  props.alternateLocale?.map((local) => (
+    <meta property="og:locale:alternate" content={local} />
+  ))
+}
+{props.image ? <OpenGraphImageTags {...props.image} /> : null}
+{props.audio ? <OpenGraphAudioTags {...props.audio} /> : null}
+{props.video ? <OpenGraphVideoTags {...props.video} /> : null}
+{
+  props.typeProperties ?
+    <OpenGraphTypePropertyTags type={type} {...props.typeProperties} />
+  : null
+}

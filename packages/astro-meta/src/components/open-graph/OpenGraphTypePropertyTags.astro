@@ -1,0 +1,15 @@
+---
+import type {
+  OpenGraphObjectType,
+  OpenGraphTypeProperties,
+} from '../../types/open-graph-metadata';
+import OpenGraphArticleMetaTags from './OpenGraphArticleMetaTags.astro';
+
+type Props = OpenGraphTypeProperties & {
+  type: OpenGraphObjectType;
+};
+
+const { type, ...props } = Astro.props;
+---
+
+{type === 'article' ? <OpenGraphArticleMetaTags {...props} /> : null}
