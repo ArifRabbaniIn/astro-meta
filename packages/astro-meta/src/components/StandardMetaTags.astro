@@ -1,0 +1,48 @@
+---
+import type { Metadata } from '../types/metadata';
+
+type Props = Omit<Metadata, 'openGraph' | 'twitter'>;
+
+const CANONICAL_URL = Astro.url.origin + Astro.url.pathname;
+
+const {
+  canonicalUrl = CANONICAL_URL,
+  charset = 'UTF-8',
+  index = true,
+  follow = true,
+  ...rest
+} = Astro.props;
+
+const robotsTag = [];
+
+if (index) {
+  robotsTag.push('index');
+}
+
+if (follow) {
+  robotsTag.push('follow');
+}
+---
+
+<meta {charset} />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content={robotsTag.join(', ')} />
+<title>{rest.title}</title>
+{
+  rest.description ?
+    <meta name="description" content={rest.description} />
+  : null
+}
+{
+  rest.keywords ?
+    <meta name="keywords" content={rest.keywords.join(', ')} />
+  : null
+}
+<link rel="canonical" href={canonicalUrl} />
+{rest.author ? <meta name="author" content={rest.author} /> : null}
+{rest.authorWebsite ? <link rel="author" href={rest.authorWebsite} /> : null}
+{
+  rest.sitemapUrl ?
+    <link rel="sitemap" type="application/xml" href={rest.sitemapUrl} />
+  : null
+}
