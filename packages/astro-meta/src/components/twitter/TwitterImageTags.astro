@@ -1,0 +1,10 @@
+---
+import type { TwitterImage } from '../../types/twitter-metadata';
+
+type Props = TwitterImage;
+
+const { url, alt } = Astro.props;
+---
+
+<meta name="twitter:image" content={url} />
+<meta name="twitter:image:alt" content={alt} />
