@@ -1,0 +1,38 @@
+---
+import type { OpenGraphImage } from '../../types/open-graph-metadata';
+
+type Props = OpenGraphImage;
+
+const { url, secureUrl, alt, type, width, height } = Astro.props;
+
+let mimeType: string;
+
+switch (type) {
+  case 'jpeg':
+    mimeType = 'image/jpeg';
+    break;
+  case 'png':
+    mimeType = 'image/png';
+    break;
+  case 'gif':
+    mimeType = 'image/gif';
+    break;
+  case 'webp':
+    mimeType = 'image/webp';
+    break;
+  default:
+    const _exhaustiveCheck: never = type;
+    mimeType = _exhaustiveCheck;
+}
+---
+
+<meta property="og:image" content={url} />
+{secureUrl ? <meta property="og:image:secure_url" content={secureUrl} /> : null}
+{mimeType ? <meta property="og:image:type" content={mimeType} /> : null}
+<meta property="og:image:alt" content={alt} />
+{width ? <meta property="og:image:width" content={width.toString()} /> : null}
+{
+  height ?
+    <meta property="og:image:height" content={height.toString()} />
+  : null
+}
