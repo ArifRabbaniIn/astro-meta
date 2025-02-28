@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@codemint/astro-meta": "^0.0.1",
     "astro": "^5.3.1"
   }
 }
