@@ -9,10 +9,10 @@ export default {
   semi: true,
   singleQuote: true,
   quoteProps: 'as-needed',
-  jsxSingleQuote: true,
+  jsxSingleQuote: false,
   trailingComma: 'es5',
   bracketSpacing: true,
-  objectWrap: 'collapse',
+  objectWrap: 'preserve',
   bracketSameLine: true,
   arrowParens: 'avoid',
   requirePragma: false,
@@ -20,7 +20,7 @@ export default {
   htmlWhitespaceSensitivity: 'css',
   endOfLine: 'lf',
   embeddedLanguageFormatting: 'auto',
-  singleAttributePerLine: true,
+  singleAttributePerLine: false,
 
   // Plugins
   plugins: ['prettier-plugin-astro'],
