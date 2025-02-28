@@ -36,7 +36,7 @@ const {
 }
 {props.locale ? <meta property="og:locale" content={props.locale} /> : null}
 {
-  props.alternateLocale?.map((local) => (
+  props.alternateLocale?.map(local => (
     <meta property="og:locale:alternate" content={local} />
   ))
 }
