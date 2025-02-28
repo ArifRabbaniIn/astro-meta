@@ -17,7 +17,7 @@ export default {
   arrowParens: 'avoid',
   requirePragma: false,
   proseWrap: 'preserve',
-  htmlWhitespaceSensitivity: 'ignore',
+  htmlWhitespaceSensitivity: 'css',
   endOfLine: 'lf',
   embeddedLanguageFormatting: 'auto',
   singleAttributePerLine: true,
@@ -27,12 +27,7 @@ export default {
 
   overrides: [
     // prettier-plugin-astro overrides
-    {
-      files: '*.astro',
-      options: {
-        parser: 'astro',
-      },
-    },
+    { files: '*.astro', options: { parser: 'astro' } },
   ],
 
   // prettier-plugin-astro config
