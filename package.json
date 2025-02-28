@@ -12,6 +12,9 @@
     "packages/*"
   ],
   "type": "module",
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "devDependencies": {
     "prettier": "^3.5.2",
     "prettier-plugin-astro": "^0.14.1"
