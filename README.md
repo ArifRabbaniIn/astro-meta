@@ -6,7 +6,9 @@ Easily add meta tags to your Astro pages.
 
 To install the package, run the following command in your terminal:
 
-`npm install @codemint/astro-meta`
+```
+npm install @codemint/astro-meta
+```
 
 ## Usage
 
