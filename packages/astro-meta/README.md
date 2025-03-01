@@ -13,7 +13,7 @@ npm install @codemint/astro-meta
 ## Usage
 
 ```
-// demo/src/layouts/Layout.astro
+// src/layouts/Layout.astro
 ---
 import { MetaTags } from '@codemint/astro-meta';
 ---
