@@ -20,9 +20,10 @@ switch (type) {
   case 'webp':
     mimeType = 'image/webp';
     break;
-  default:
+  default: {
     const _exhaustiveCheck: never = type;
     mimeType = _exhaustiveCheck;
+  }
 }
 ---
 

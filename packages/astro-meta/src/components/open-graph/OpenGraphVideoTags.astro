@@ -20,9 +20,10 @@ switch (type) {
   case 'H264':
     mimeType = 'video/H264';
     break;
-  default:
+  default: {
     const _exhaustiveCheck: never = type;
     mimeType = _exhaustiveCheck;
+  }
 }
 ---
 

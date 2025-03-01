@@ -20,9 +20,10 @@ switch (type) {
   case 'ogg':
     mimeType = 'audio/ogg';
     break;
-  default:
+  default: {
     const _exhaustiveCheck: never = type;
     mimeType = _exhaustiveCheck;
+  }
 }
 ---
 
