@@ -1,4 +1,4 @@
-# Astro Meta Library Example
+# Astro Meta Example
 
 ## 🧞 Commands
 
