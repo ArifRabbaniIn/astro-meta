@@ -90,4 +90,4 @@ This project is licensed under the MIT License.
 
 ## Author
 
-[https://github.com/arabbani](Arif Rabbani)
+[Arif Rabbani](https://github.com/arabbani)
