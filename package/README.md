@@ -9,7 +9,7 @@
 - **Social Media Ready:** Configure meta tags for social media platforms like Twitter and Facebook.
 - **Component Based**: Use component to manage meta tags.
 
-## Installation
+### Installation
 
 ```bash
 npm install @codemint/astro-meta
@@ -19,7 +19,7 @@ yarn add @codemint/astro-meta
 pnpm add @codemint/astro-meta
 ```
 
-## Usage
+### Usage
 
 ```astro
 ---
@@ -43,7 +43,7 @@ import { MetaTags } from '@codemint/astro-meta';
 
 The above code snippet will add title, description and keywords meta tags to you html head section along with some other meta tags like charset, viewport, robots, canonical url etc.
 
-## Advanced Usage
+### Advanced Usage
 
 ```astro
 ---
@@ -76,18 +76,18 @@ import { MetaTags } from '@codemint/astro-meta';
 </html>
 ```
 
-## API
+### API
 
 Codes are commented with JSDoc. You can check the JSDoc comment for type information.
 
-## Contributing
+### Contributing
 
 Contributions are welcome! Please feel free to open a pull request or issue on the GitHub repository.
 
-## License
+### License
 
 This project is licensed under the MIT License.
 
-## Author
+### Author
 
 [Arif Rabbani](https://github.com/arabbani)
