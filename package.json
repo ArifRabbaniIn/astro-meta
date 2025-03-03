@@ -9,7 +9,7 @@
   },
   "workspaces": [
     "demo",
-    "packages/*"
+    "package"
   ],
   "type": "module",
   "scripts": {
