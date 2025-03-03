@@ -7,7 +7,6 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier --write .",
-    "check": "astro check",
     "astro": "astro"
   },
   "dependencies": {
