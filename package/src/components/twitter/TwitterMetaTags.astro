@@ -5,6 +5,10 @@ import TwitterImageTags from './TwitterImageTags.astro';
 type Props = TwitterMetadata;
 
 const { cardType = 'summary', ...props } = Astro.props;
+
+if (!props.site && !props.siteId) {
+  throw new Error('Either site or siteId is required');
+}
 ---
 
 <meta name="twitter:card" content={cardType} />
@@ -14,6 +18,16 @@ const { cardType = 'summary', ...props } = Astro.props;
     <meta name="twitter:description" content={props.description} />
   : null
 }
-<meta name="twitter:site" content={props.site} />
+{props.site ? <meta name="twitter:site" content={props.site} /> : null}
+{
+  props.siteId ?
+    <meta name="twitter:site:id" content={String(props.siteId)} />
+  : null
+}
 {props.creator ? <meta name="twitter:creator" content={props.creator} /> : null}
+{
+  props.creatorId ?
+    <meta name="twitter:creator:id" content={String(props.creatorId)} />
+  : null
+}
 {props.image ? <TwitterImageTags {...props.image} /> : null}

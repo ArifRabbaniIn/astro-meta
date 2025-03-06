@@ -1,113 +1,310 @@
 /**
- * Represents OpenGraph metadata.
- *
- * @typedef {Object} OpenGraphMetadata
- * @property {string} title - The title of your object as it should appear within the graph, e.g., "The Rock".
- * @property {OpenGraphObjectType} [type] - The type of your object (default: website).
- * @property {string} [canonicalUrl] - The canonical URL of your object that will be used as its permanent ID in the graph (default: current URL without the query params).
- * @property {string} [description] - A short description of the page.
- * @property {string} [determiner] - The word that appears before this object's title in a sentence. An enum of (a, an, the, "", auto). If auto is chosen, the consumer of your data should chose between "a" or "an". (default: "" (blank)).
- * @property {string} [siteName] - If your object is part of a larger web site, the name which should be displayed for the overall site. e.g., "IMDb".
- * @property {string} [locale] -  The locale these tags are marked up in. Of the format language_TERRITORY. (default: "en_US").
- * @property {string[]} [alternateLocale] - An array of other locales this page is available in.
- * @property {OpenGraphImage} [image] - The image associated with the page.
- * @property {OpenGraphAudio} [audio] - The audio associated with the page.
- * @property {OpenGraphVideo} [video] - The video associated with the page.
- * @property {OpenGraphTypeProperties} [typeProperties] - The extra properties related to the object type.
+ * Represents Open Graph metadata for a webpage
  */
 export type OpenGraphMetadata = {
+  /**
+   * The title of the object
+   * @type {string}
+   * @meta og:title
+   * @example <meta property="og:title" content="The Rock" />
+   */
   title: string;
+
+  /**
+   * The type of the object (e.g., website, article)
+   * @type {OpenGraphObjectType}
+   * @default website
+   * @meta og:type
+   * @example <meta property="og:type" content="website" />
+   */
   type?: OpenGraphObjectType | undefined;
+
+  /**
+   * The canonical URL of the object
+   * @type {string}
+   * @default The current url without the query params
+   * @meta og:url
+   * @example <meta property="og:url" content="https://www.example.com/" />
+   */
   canonicalUrl?: string | undefined;
+
+  /**
+   * A description of the object
+   * @type {string}
+   * @meta og:description
+   * @example <meta property="og:description" content="A description of the page" />
+   */
   description?: string | undefined;
+
+  /**
+   * The word that appears before the object's title (e.g., "the" in "the movie")
+   * @type {string}
+   * @meta og:determiner
+   * @example <meta property="og:determiner" content="the" />
+   */
   determiner?: string | undefined;
+
+  /**
+   * If your object is part of a larger web site, the name which should be displayed for the overall site.
+   * @type {string}
+   * @meta og:site_name
+   * @example <meta property="og:site_name" content="IMDb" />
+   */
   siteName?: string | undefined;
+
+  /**
+   * The locale of the resource (e.g., en_US)
+   * @type {string}
+   * @meta og:locale
+   * @example <meta property="og:locale" content="en_US" />
+   */
   locale?: string | undefined;
+
+  /**
+   * Array of other locales this page is available in
+   * @type {string[]}
+   * @meta og:locale:alternate
+   * @example <meta property="og:locale:alternate" content="fr_FR" />
+   */
   alternateLocale?: string[] | undefined;
+
+  /**
+   * The image that represents the object
+   * @type {OpenGraphImage}
+   * @meta og:image and related image properties
+   */
   image?: OpenGraphImage | undefined;
+
+  /**
+   * Audio file that complements the object
+   * @type {OpenGraphAudio}
+   * @meta og:audio and related audio properties
+   */
   audio?: OpenGraphAudio | undefined;
+
+  /**
+   * Video file that complements the object
+   * @type {OpenGraphVideo}
+   * @meta og:video and related video properties
+   */
   video?: OpenGraphVideo | undefined;
+
+  /**
+   * Additional properties based on the object type
+   * @type {OpenGraphTypeProperties}
+   */
   typeProperties?: OpenGraphTypeProperties | undefined;
 };
 
+/**
+ * Properties specific to article type objects
+ */
 export type OpenGraphTypeProperties = OpenGraphArticle;
 
 /**
- * Represents an OpenGraph image.
- *
- * @typedef {Object} OpenGraphImage
- * @property {string} url - The URL of the image.
- * @property {string} [secureUrl] - An alternate URL to use if the webpage requires HTTPS.
- * @property {string} alt - A description of what is in the image (not a caption).
- * @property {OpenGraphImageType} type - The type of the image (e.g. jpeg, png).
- * @property {number} [width] - The width of the image in pixels.
- * @property {number} [height] - The height of the image in pixels.
+ * Represents an Open Graph image object
  */
 export type OpenGraphImage = {
+  /**
+   * URL of the image
+   * @type {string}
+   * @meta og:image
+   * @example <meta property="og:image" content="https://example.com/image.jpg" />
+   */
   url: string;
+
+  /**
+   * Secure HTTPS URL of the image
+   * @type {string}
+   * @meta og:image:secure_url
+   * @example <meta property="og:image:secure_url" content="https://secure.example.com/image.jpg" />
+   */
   secureUrl?: string | undefined;
+
+  /**
+   * A description of what is in the image
+   * @type {string}
+   * @meta og:image:alt
+   * @example <meta property="og:image:alt" content="A description of what is in the image" />
+   */
   alt: string;
+
+  /**
+   * The MIME type of the image
+   * @type {OpenGraphImageType}
+   * @meta og:image:type
+   * @example <meta property="og:image:type" content="image/jpeg" />
+   */
   type: OpenGraphImageType;
+
+  /**
+   * The width of the image in pixels
+   * @type {number}
+   * @meta og:image:width
+   * @example <meta property="og:image:width" content="1200" />
+   */
   width?: number | undefined;
+
+  /**
+   * The height of the image in pixels
+   * @type {number}
+   * @meta og:image:height
+   * @example <meta property="og:image:height" content="630" />
+   */
   height?: number | undefined;
 };
 
 /**
- * Represents an OpenGraph audio file.
- *
- * @typedef {Object} OpenGraphAudio
- * @property {string} url - The URL of the audio file.
- * @property {string} [secureUrl] - An alternate URL to use if the webpage requires HTTPS.
- * @property {OpenGraphAudioType} type - The type of the audio file (e.g. aac, mp4, mpeg, ogg).
+ * Represents an Open Graph audio object
  */
 export type OpenGraphAudio = {
+  /**
+   * URL of the audio file
+   * @type {string}
+   * @meta og:audio
+   * @example <meta property="og:audio" content="https://example.com/audio.mp3" />
+   */
   url: string;
+
+  /**
+   * Secure HTTPS URL of the audio file
+   * @type {string}
+   * @meta og:audio:secure_url
+   * @example <meta property="og:audio:secure_url" content="https://secure.example.com/audio.mp3" />
+   */
   secureUrl?: string | undefined;
+
+  /**
+   * The MIME type of the audio file
+   * @type {OpenGraphAudioType}
+   * @meta og:audio:type
+   * @example <meta property="og:audio:type" content="audio/mpeg" />
+   */
   type: OpenGraphAudioType;
 };
 
 /**
- * Represents an OpenGraph video file.
- *
- * @typedef {Object} OpenGraphVideo
- * @property {string} url - The URL of the video file.
- * @property {string} [secureUrl] - An alternate URL to use if the webpage requires HTTPS.
- * @property {OpenGraphVideoType} type - The type of the video file (e.g. mp4, AV1, H264, mpeg).
- * @property {number} [width] - The width of the video in pixels.
- * @property {number} [height] - The height of the video in pixels.
+ * Represents an Open Graph video object
  */
 export type OpenGraphVideo = {
+  /**
+   * URL of the video file
+   * @type {string}
+   * @meta og:video
+   * @example <meta property="og:video" content="https://example.com/video.mp4" />
+   */
   url: string;
+
+  /**
+   * Secure HTTPS URL of the video file
+   * @type {string}
+   * @meta og:video:secure_url
+   * @example <meta property="og:video:secure_url" content="https://secure.example.com/video.mp4" />
+   */
   secureUrl?: string | undefined;
+
+  /**
+   * The MIME type of the video file
+   * @type {OpenGraphVideoType}
+   * @meta og:video:type
+   * @example <meta property="og:video:type" content="video/mp4" />
+   */
   type: OpenGraphVideoType;
+
+  /**
+   * The width of the video in pixels
+   * @type {number}
+   * @meta og:video:width
+   * @example <meta property="og:video:width" content="1280" />
+   */
   width?: number | undefined;
+
+  /**
+   * The height of the video in pixels
+   * @type {number}
+   * @meta og:video:height
+   * @example <meta property="og:video:height" content="720" />
+   */
   height?: number | undefined;
 };
 
 /**
- * Represents an OpenGraph article.
- *
- * @typedef {Object} OpenGraphArticle
- * @property {string} publishedTime - The publication time of the article (ISO Date String).
- * @property {string} [modifiedTime] - The last modification time of the article (ISO Date String).
- * @property {string} [expirationTime] - The expiration time of the article (ISO Date String).
- * @property {string[]} authors - The authors of the article.
- * @property {string[]} tags -  Tags associated with this article.
- * @property {string} [section] - A high-level section name, E.g. Technology.
+ * Represents Open Graph article specific properties
  */
 export type OpenGraphArticle = {
+  /**
+   * When the article was first published
+   * @type {string}
+   * @meta article:published_time
+   * @example <meta property="article:published_time" content="2023-12-25T19:00:00+00:00" />
+   */
   publishedTime: string;
+
+  /**
+   * When the article was last modified
+   * @type {string}
+   * @meta article:modified_time
+   * @example <meta property="article:modified_time" content="2023-12-26T19:00:00+00:00" />
+   */
   modifiedTime?: string | undefined;
+
+  /**
+   * When the article is out of date
+   * @type {string}
+   * @meta article:expiration_time
+   * @example <meta property="article:expiration_time" content="2024-12-25T19:00:00+00:00" />
+   */
   expirationTime?: string | undefined;
+
+  /**
+   * Writers of the article
+   * @type {string[]}
+   * @meta article:author
+   * @example <meta property="article:author" content="John Doe" />
+   */
   authors: string[];
+
+  /**
+   * Keywords for the article
+   * @type {string[]}
+   * @meta article:tag
+   * @example <meta property="article:tag" content="technology" />
+   */
   tags: string[];
+
+  /**
+   * A high-level section name
+   * @type {string}
+   * @meta article:section
+   * @example <meta property="article:section" content="Technology" />
+   */
   section?: string | undefined;
 };
 
+/**
+ * Valid Open Graph object types
+ * @type {('website' | 'article')}
+ * @meta og:type
+ */
 export type OpenGraphObjectType = 'website' | 'article';
 
+/**
+ * Valid Open Graph image MIME types
+ * @type {('jpeg' | 'png' | 'gif' | 'webp')}
+ * @meta og:image:type
+ */
 export type OpenGraphImageType = 'jpeg' | 'png' | 'gif' | 'webp';
 
+/**
+ * Valid Open Graph video MIME types
+ * @type {('mp4' | 'AV1' | 'H264' | 'mpeg')}
+ * @meta og:video:type
+ */
 export type OpenGraphVideoType = 'mp4' | 'AV1' | 'H264' | 'mpeg';
 
+/**
+ * Valid Open Graph audio MIME types
+ * @type {('aac' | 'mp4' | 'mpeg' | 'ogg')}
+ * @meta og:audio:type
+ */
 export type OpenGraphAudioType = 'aac' | 'mp4' | 'mpeg' | 'ogg';
