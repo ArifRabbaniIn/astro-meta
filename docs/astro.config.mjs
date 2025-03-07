@@ -12,6 +12,10 @@ export default defineConfig({
       },
       sidebar: [
         {
+          label: 'Start Here',
+          items: [{ label: 'Getting Started', slug: 'getting-started' }],
+        },
+        {
           label: 'Guides',
           items: [{ label: 'Example Guide', slug: 'guides/example' }],
         },
