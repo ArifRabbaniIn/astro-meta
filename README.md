@@ -1,3 +1,5 @@
+# Astro Meta
+
 Astro Meta is a simple yet powerful Astro integration designed to make adding meta tags to your Astro site a breeze. It aims to streamline the process of managing SEO and social media metadata (facebook, twitter) for your web pages.
 
 ### Docs
