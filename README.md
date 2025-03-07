@@ -2,6 +2,8 @@ Astro Meta is a simple yet powerful Astro integration designed to make adding me
 
 ### Docs
 
+[https://astro-meta-docs.vercel.app/](https://astro-meta-docs.vercel.app/)
+
 ### Contributing
 
 Contributions are welcome! Please feel free to open a pull request or issue on the GitHub repository.
