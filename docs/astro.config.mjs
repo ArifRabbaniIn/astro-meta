@@ -7,6 +7,10 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'Astro Meta',
+      description:
+        'Astro Meta is a simple yet powerful Astro integration designed to make adding meta tags to your Astro site a breeze. It aims to streamline the process of managing SEO and social media metadata (facebook, twitter) for your web pages.',
+      lastUpdated: true,
+      credits: true,
       social: {
         github: 'https://github.com/arabbani/astro-meta',
       },
@@ -20,7 +24,7 @@ export default defineConfig({
         },
         {
           label: 'Reference',
-          autogenerate: { directory: 'reference' },
+          autogenerate: { directory: 'reference', collapsed: true },
         },
       ],
     }),
