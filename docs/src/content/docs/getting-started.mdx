@@ -1,0 +1,93 @@
+---
+title: Getting Started
+description: Learn how to use Astro Meta to add meta tags to your Astro site.
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+## Installation
+
+<Tabs>
+  <TabItem label="npm">
+
+    ```sh
+    npm install @codemint/astro-meta
+    ```
+
+  </TabItem>
+  <TabItem label="pnpm">
+
+    ```sh
+    pnpm add @codemint/astro-meta
+    ```
+
+  </TabItem>
+  <TabItem label="yarn">
+
+    ```sh
+    yarn add @codemint/astro-meta
+    ```
+
+  </TabItem>
+</Tabs>
+
+## Usage
+
+Import the `MetaTags` component and use it inside your head to add the meta tags.
+
+```astro ins={2, 8-12}
+---
+import { MetaTags } from '@codemint/astro-meta';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <MetaTags
+      title="Astro Meta"
+      description="Easily add meta tags to your Astro pages."
+      keywords={['astro', 'meta', 'open graph', 'twitter', 'seo']}
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+```
+
+The above code snippet will add title, description and keywords meta tags to your html head section along with some other meta tags like charset, viewport, robots, canonical url etc.
+
+## Advanced Usage
+
+```astro ins={2, 8-23}
+---
+import { MetaTags } from '@codemint/astro-meta';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <MetaTags
+      title="My Blog Post Title"
+      description="A detailed description of the blog post."
+      openGraph={{
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        image: 'https://example.com/image.jpg',
+      }}
+      twitter={{
+        title: 'Twitter Card Title',
+        description: 'Twitter Card Description',
+        image: 'https://example.com/twitter-image.jpg',
+        card: 'summary_large_image',
+      }}
+      canonicalUrl="https://example.com/blog/my-post"
+    />
+  </head>
+  <body>
+    <h1>My Blog post</h1>
+  </body>
+</html>
+```
+
+**Tip:** The props of MetaTags component is fully typed and include detailed JSDoc comments. This means you'll get helpful hints, autocompletion, and documentation directly within your code editor as you use them.
