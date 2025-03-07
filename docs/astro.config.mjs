@@ -22,10 +22,6 @@ export default defineConfig({
             { label: 'Getting Started', slug: 'getting-started' },
           ],
         },
-        {
-          label: 'Reference',
-          autogenerate: { directory: 'reference', collapsed: true },
-        },
       ],
     }),
   ],
