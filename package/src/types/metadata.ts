@@ -13,7 +13,6 @@ export type Metadata = {
 
   /**
    * A short description of the webpage content
-   * @meta description
    * @example <meta name="description" content="Your website description" />
    */
   description?: string | undefined;
@@ -28,7 +27,6 @@ export type Metadata = {
   /**
    * Character set of the webpage
    * @default UTF-8
-   * @meta charset
    * @example <meta charset="UTF-8" />
    */
   charset?: string | undefined;
@@ -36,20 +34,19 @@ export type Metadata = {
   /**
    * Whether the webpage should be indexed by search engines
    * @default true
-   * @meta robots
+   * @example <meta name="robots" content="index" />
    */
   index?: boolean | undefined;
 
   /**
    * Whether the webpage should be followed by search engines
    * @default true
-   * @meta robots
+   * @example <meta name="robots" content="follow" />
    */
   follow?: boolean | undefined;
 
   /**
    * Keywords associated with the webpage
-   * @meta keywords
    * @example <meta name="keywords" content="keyword1, keyword2, keyword3" />
    */
   keywords?: string[] | undefined;
@@ -66,14 +63,12 @@ export type Metadata = {
 
   /**
    * Author of the webpage
-   * @meta author
    * @example <meta name="author" content="John Doe" />
    */
   author?: string | undefined;
 
   /**
    * URL of the author of the website
-   * @meta author
    * @example <link rel="author" href="https://johndoe.com" />
    */
   authorWebsite?: string | undefined;
