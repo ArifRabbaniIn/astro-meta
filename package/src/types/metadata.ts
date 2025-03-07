@@ -7,14 +7,12 @@ import type { TwitterMetadata } from './twitter-metadata';
 export type Metadata = {
   /**
    * The title of the webpage
-   * @type {string}
    * @example <title>Your webpage title</title>
    */
   title: string;
 
   /**
    * A short description of the webpage content
-   * @type {string}
    * @meta description
    * @example <meta name="description" content="Your website description" />
    */
@@ -22,7 +20,6 @@ export type Metadata = {
 
   /**
    * Canonical URL of the webpage
-   * @type {string}
    * @default The current url without the query params
    * @example <link rel="canonical" href="https://example.com/your-page" />
    */
@@ -30,7 +27,6 @@ export type Metadata = {
 
   /**
    * Character set of the webpage
-   * @type {string}
    * @default UTF-8
    * @meta charset
    * @example <meta charset="UTF-8" />
@@ -39,7 +35,6 @@ export type Metadata = {
 
   /**
    * Whether the webpage should be indexed by search engines
-   * @type {boolean}
    * @default true
    * @meta robots
    */
@@ -47,7 +42,6 @@ export type Metadata = {
 
   /**
    * Whether the webpage should be followed by search engines
-   * @type {boolean}
    * @default true
    * @meta robots
    */
@@ -55,7 +49,6 @@ export type Metadata = {
 
   /**
    * Keywords associated with the webpage
-   * @type {string[]}
    * @meta keywords
    * @example <meta name="keywords" content="keyword1, keyword2, keyword3" />
    */
@@ -63,19 +56,16 @@ export type Metadata = {
 
   /**
    * Open Graph metadata for the webpage
-   * @type {OpenGraphMetadata}
    */
   openGraph?: OpenGraphMetadata | undefined;
 
   /**
    * Twitter metadata for the webpage
-   * @type {TwitterMetadata}
    */
   twitter?: TwitterMetadata | undefined;
 
   /**
    * Author of the webpage
-   * @type {string}
    * @meta author
    * @example <meta name="author" content="John Doe" />
    */
@@ -83,7 +73,6 @@ export type Metadata = {
 
   /**
    * URL of the author of the website
-   * @type {string}
    * @meta author
    * @example <link rel="author" href="https://johndoe.com" />
    */
@@ -91,7 +80,6 @@ export type Metadata = {
 
   /**
    * URL to the sitemap
-   * @type {string}
    * @default /sitemap.xml
    * @example <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
    */
