@@ -19,10 +19,6 @@ export default defineConfig({
           ],
         },
         {
-          label: 'Guides',
-          items: [{ label: 'Example Guide', slug: 'guides/example' }],
-        },
-        {
           label: 'Reference',
           autogenerate: { directory: 'reference' },
         },
