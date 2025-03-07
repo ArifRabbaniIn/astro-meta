@@ -1,7 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
-import starlightTypeDoc, { typeDocSidebarGroup } from 'starlight-typedoc';
 
 // https://astro.build/config
 export default defineConfig({
@@ -27,13 +26,6 @@ export default defineConfig({
           label: 'Reference',
           autogenerate: { directory: 'reference', collapsed: true },
         },
-        typeDocSidebarGroup,
-      ],
-      plugins: [
-        starlightTypeDoc({
-          entryPoints: ['../package/src/type.ts'],
-          tsconfig: '../package/tsconfig.json',
-        }),
       ],
     }),
   ],
