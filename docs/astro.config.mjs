@@ -13,7 +13,10 @@ export default defineConfig({
       sidebar: [
         {
           label: 'Start Here',
-          items: [{ label: 'Getting Started', slug: 'getting-started' }],
+          items: [
+            { label: 'Introduction', slug: 'introduction' },
+            { label: 'Getting Started', slug: 'getting-started' },
+          ],
         },
         {
           label: 'Guides',
