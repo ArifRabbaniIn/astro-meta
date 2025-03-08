@@ -25,13 +25,13 @@ export type TwitterMetadata = {
    * The Twitter username of the website or publisher. Either site or siteId is required.
    * @example <meta name="twitter:site" content="@website" />
    */
-  site: string;
+  site?: string;
 
   /**
    * The Twitter user ID of the website or publisher. Either site or siteId is required
    * @example <meta name="twitter:site:id" content="123456789" />
    */
-  siteId: number;
+  siteId?: number;
 
   /**
    * The Twitter username of the content creator
@@ -43,7 +43,7 @@ export type TwitterMetadata = {
    * The Twitter user ID of the content creator
    * @example <meta name="twitter:creator:id" content="123456789" />
    */
-  creatorId: number;
+  creatorId?: number;
 
   /**
    * Image information to use in the card. twitter:image and related image properties
