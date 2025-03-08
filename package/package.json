@@ -1,6 +1,6 @@
 {
   "name": "@codemint/astro-meta",
-  "version": "1.2.0",
+  "version": "2.0.0",
   "description": "Easily add meta tags to your Astro app.",
   "keywords": [
     "seo",
