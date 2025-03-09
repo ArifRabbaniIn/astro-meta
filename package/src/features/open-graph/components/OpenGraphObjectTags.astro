@@ -1,8 +1,11 @@
 ---
 import type { OpenGraphMeta } from '../types';
 import BaseTags from './BaseTags.astro';
+import MetaTag from './MetaTag.astro';
 
 type Props = OpenGraphMeta;
+
+
 ---
 
 <meta property="og:type" content={Astro.props.type} />
@@ -20,8 +23,9 @@ type Props = OpenGraphMeta;
   video={Astro.props.video}
 />
 
-<!-- {
-  Astro.props.type === 'summary' ?
-    <SummaryCardMetaTags {...Astro.props} />
-  : null
-} -->
+{Astro.props.type === 'profile' ? (
+  <MetaTag name='profile:first_name' content={Astro.props.firstName} />
+  <MetaTag name='profile:last_name' content={Astro.props.lastName} />
+  <MetaTag name='profile:username' content={Astro.props.username} />
+  <MetaTag name='profile:gender' content={Astro.props.gender} />
+) : null}
