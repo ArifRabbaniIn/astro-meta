@@ -1,0 +1,9 @@
+---
+import MetaTag from '../../MetaTag.astro';
+
+type Props = {
+  content?: string | undefined;
+};
+---
+
+<MetaTag name="twitter:creator" {...Astro.props} />
