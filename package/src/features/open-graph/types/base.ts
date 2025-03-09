@@ -1,6 +1,5 @@
 import type { OpenGraphAudio } from './audio';
 import type { OpenGraphImage } from './image';
-import type { OpenGraphType } from './object-type';
 import type { OpenGraphVideo } from './video';
 
 /**
@@ -13,13 +12,6 @@ export type OpenGraphBase = {
    * @example `<meta property="og:title" content="The Rock">`
    */
   title: string;
-
-  /**
-   * The type of object (e.g., website, article, book, etc.).
-   *
-   * @example `<meta property="og:type" content="video.movie">`
-   */
-  type: OpenGraphType;
 
   /**
    * The canonical URL of the object.

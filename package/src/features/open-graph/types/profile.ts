@@ -4,6 +4,11 @@ import type { OpenGraphBase } from './base';
  * Open Graph Metadata for Profiles (People)
  */
 export type OpenGraphProfile = OpenGraphBase & {
+  /**
+   * The type of object.
+   *
+   * @example `<meta property="og:type" content="profile">`
+   */
   type: 'profile';
 
   /**
