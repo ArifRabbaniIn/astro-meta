@@ -1,0 +1,15 @@
+---
+type Props = {
+  name: string;
+  content?: string | number | undefined;
+};
+---
+
+{
+  Astro.props.content ?
+    <meta
+      property={Astro.props.name}
+      content={Astro.props.content.toString()}
+    />
+  : null
+}
