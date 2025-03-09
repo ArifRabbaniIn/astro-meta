@@ -1,11 +1,11 @@
 ---
-import type { TwitterMetaTags } from '../types';
+import type { TwitterCard } from '../types/card';
 import AppCardMetaTags from './AppCardMetaTags.astro';
 import PlayerCardMetaTags from './PlayerCardMetaTags.astro';
 import SummaryCardMetaTags from './SummaryCardMetaTags.astro';
 import SummaryLargeImageCardMetaTags from './SummaryLargeImageCardMetaTags.astro';
 
-type Props = TwitterMetaTags;
+type Props = TwitterCard;
 ---
 
 <meta name="twitter:card" content={Astro.props.card} />
