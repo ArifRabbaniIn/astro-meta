@@ -8,20 +8,20 @@ import SummaryLargeImageCardMetaTags from './SummaryLargeImageCardMetaTags.astro
 type Props = TwitterCard;
 ---
 
-<meta name="twitter:card" content={Astro.props.card} />
+<meta name="twitter:card" content={Astro.props.type} />
 
 {
-  Astro.props.card === 'summary' ?
+  Astro.props.type === 'summary' ?
     <SummaryCardMetaTags {...Astro.props} />
   : null
 }
 
 {
-  Astro.props.card === 'summary_large_image' ?
+  Astro.props.type === 'summary_large_image' ?
     <SummaryLargeImageCardMetaTags {...Astro.props} />
   : null
 }
 
-{Astro.props.card === 'app' ? <AppCardMetaTags {...Astro.props} /> : null}
+{Astro.props.type === 'app' ? <AppCardMetaTags {...Astro.props} /> : null}
 
-{Astro.props.card === 'player' ? <PlayerCardMetaTags {...Astro.props} /> : null}
+{Astro.props.type === 'player' ? <PlayerCardMetaTags {...Astro.props} /> : null}

@@ -2,7 +2,12 @@
  * Twitter Summary Card.
  */
 export type TwitterSummaryCard = {
-  card: 'summary';
+  /**
+   * The card type.
+   *
+   * @example `<meta name="twitter:card" content="summary">`
+   */
+  type: 'summary';
 
   /**
    * The Twitter username of the website.

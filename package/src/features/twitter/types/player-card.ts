@@ -2,7 +2,12 @@
  * Twitter Player Card.
  */
 export type TwitterPlayerCard = {
-  card: 'player';
+  /**
+   * The card type.
+   *
+   * @example `<meta name="twitter:card" content="player">`
+   */
+  type: 'player';
 
   /**
    * The Twitter username of the website.

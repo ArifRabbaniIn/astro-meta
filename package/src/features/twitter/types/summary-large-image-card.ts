@@ -2,7 +2,12 @@
  * Twitter Summary Large Image Card.
  */
 export type TwitterSummaryLargeImageCard = {
-  card: 'summary_large_image';
+  /**
+   * The card type.
+   *
+   * @example `<meta name="twitter:card" content="summary_large_image">`
+   */
+  type: 'summary_large_image';
 
   /**
    * The Twitter username of the website.

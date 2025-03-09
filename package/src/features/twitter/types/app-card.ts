@@ -2,7 +2,12 @@
  * Twitter App Card.
  */
 export type TwitterAppCard = {
-  card: 'app';
+  /**
+   * The card type.
+   *
+   * @example `<meta name="twitter:card" content="app">`
+   */
+  type: 'app';
 
   /**
    * The Twitter username of the website.
