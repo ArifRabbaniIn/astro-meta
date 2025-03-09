@@ -1,0 +1,27 @@
+---
+import type { OpenGraphMeta } from '../types';
+import BaseMetaTags from './BaseMetaTags.astro';
+
+type Props = OpenGraphMeta;
+---
+
+<meta property="og:type" content={Astro.props.type} />
+
+<BaseMetaTags
+  title={Astro.props.title}
+  url={Astro.props.url}
+  images={Astro.props.images}
+  description={Astro.props.description}
+  siteName={Astro.props.siteName}
+  locale={Astro.props.locale}
+  alternateLocales={Astro.props.alternateLocales}
+  determiner={Astro.props.determiner}
+  audio={Astro.props.audio}
+  video={Astro.props.video}
+/>
+
+<!-- {
+  Astro.props.type === 'summary' ?
+    <SummaryCardMetaTags {...Astro.props} />
+  : null
+} -->
