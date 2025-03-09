@@ -75,7 +75,7 @@ export type TwitterAppCard = {
   googlePlayAppId: string;
 
   /**
-   * Custom URL scheme of the Android App. The Android deep link URL. Used for deep linking.
+   * The Android deep link URL.
    *
    * @example `<meta name="twitter:app:url:googleplay" content="example://open">`
    */
