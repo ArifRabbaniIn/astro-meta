@@ -21,25 +21,25 @@ export type OpenGraphBase = {
   url: string;
 
   /**
-   * The image representing the object. og:image and related image properties
+   * Image representing the object. og:image and related image properties
    *
    * @example `<meta property="og:image" content="https://example.com/rock.jpg">`
    */
-  image: OpenGraphImage[];
+  images: OpenGraphImage[];
 
   /**
    * A brief description of the object (up to 300 characters).
    *
    * @example `<meta property="og:description" content="A thrilling action movie starring The Rock.">`
    */
-  description?: string;
+  description?: string | undefined;
 
   /**
    * The name of the website that published the object.
    *
    * @example `<meta property="og:site_name" content="IMDb">`
    */
-  siteName?: string;
+  siteName?: string | undefined;
 
   /**
    * The locale of the object.
@@ -47,14 +47,14 @@ export type OpenGraphBase = {
    *
    * @example `<meta property="og:locale" content="en_US">`
    */
-  locale?: string;
+  locale?: string | undefined;
 
   /**
    * An array of other locales this page is available in.
    *
    * @example `<meta property="og:locale:alternate" content="fr_FR">`
    */
-  alternateLocales?: string[];
+  alternateLocales?: string[] | undefined;
 
   /**
    * The word that appears before this object's title in a sentence.
@@ -63,15 +63,15 @@ export type OpenGraphBase = {
    *
    * @example `<meta property="og:determiner" content="the">`
    */
-  determiner?: 'a' | 'an' | 'the' | '' | 'auto';
+  determiner?: 'a' | 'an' | 'the' | '' | 'auto' | undefined;
 
   /**
    * Audio to accompany this object. og:audio and related audio properties
    */
-  audio?: OpenGraphAudio;
+  audio?: OpenGraphAudio | undefined;
 
   /**
    * Video that complements this object. og:video and related audio properties
    */
-  video?: OpenGraphVideo;
+  video?: OpenGraphVideo | undefined;
 };

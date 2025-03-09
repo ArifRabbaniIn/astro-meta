@@ -14,12 +14,12 @@ export type OpenGraphAudio = {
    *
    * @example `<meta property="og:audio:secure_url" content="https://secure.example.com/sound.mp3">`
    */
-  secureUrl?: string;
+  secureUrl?: string | undefined;
 
   /**
    * The MIME type of the audio file.
    *
    * @example `<meta property="og:audio:type" content="audio/mpeg">`
    */
-  type?: string;
+  type?: string | undefined;
 };
