@@ -1,5 +1,7 @@
+import type { OpenGraphAudio } from './audio';
 import type { OpenGraphImage } from './image';
 import type { OpenGraphType } from './object-type';
+import type { OpenGraphVideo } from './video';
 
 /**
  * Open Graph Basic Metadata
@@ -63,13 +65,6 @@ export type OpenGraphBase = {
   alternateLocales?: string[];
 
   /**
-   * A URL to an audio file to accompany this object.
-   *
-   * @example `<meta property="og:audio" content="https://example.com/audio.mp3">`
-   */
-  audio?: string;
-
-  /**
    * The word that appears before this object's title in a sentence.
    * Can be one of: `"a"`, `"an"`, `"the"`, `""` (blank), `"auto"`.
    * If `"auto"` is chosen, the consumer of the data should determine `"a"` or `"an"`.
@@ -79,9 +74,12 @@ export type OpenGraphBase = {
   determiner?: 'a' | 'an' | 'the' | '' | 'auto';
 
   /**
-   * A URL to a video file that complements this object.
-   *
-   * @example `<meta property="og:video" content="https://example.com/video.mp4">`
+   * Audio to accompany this object. og:audio and related audio properties
    */
-  video?: string;
+  audio?: OpenGraphAudio;
+
+  /**
+   * Video that complements this object. og:video and related audio properties
+   */
+  video?: OpenGraphVideo;
 };
