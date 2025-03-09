@@ -1,27 +1,23 @@
 ---
 import type { TwitterCard } from '../types/card';
-import AppCardMetaTags from './AppCardTags.astro';
-import PlayerCardMetaTags from './PlayerCardTags.astro';
-import SummaryCardMetaTags from './SummaryCardTags.astro';
-import SummaryLargeImageCardMetaTags from './SummaryLargeImageCardTags.astro';
+import AppCardTags from './AppCardTags.astro';
+import PlayerCardTags from './PlayerCardTags.astro';
+import SummaryCardTags from './SummaryCardTags.astro';
+import SummaryLargeImageCardTags from './SummaryLargeImageCardTags.astro';
 
 type Props = TwitterCard;
 ---
 
 <meta name="twitter:card" content={Astro.props.type} />
 
-{
-  Astro.props.type === 'summary' ?
-    <SummaryCardMetaTags {...Astro.props} />
-  : null
-}
+{Astro.props.type === 'summary' ? <SummaryCardTags {...Astro.props} /> : null}
 
 {
   Astro.props.type === 'summary_large_image' ?
-    <SummaryLargeImageCardMetaTags {...Astro.props} />
+    <SummaryLargeImageCardTags {...Astro.props} />
   : null
 }
 
-{Astro.props.type === 'app' ? <AppCardMetaTags {...Astro.props} /> : null}
+{Astro.props.type === 'app' ? <AppCardTags {...Astro.props} /> : null}
 
-{Astro.props.type === 'player' ? <PlayerCardMetaTags {...Astro.props} /> : null}
+{Astro.props.type === 'player' ? <PlayerCardTags {...Astro.props} /> : null}
