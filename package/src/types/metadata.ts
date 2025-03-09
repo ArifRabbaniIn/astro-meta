@@ -1,5 +1,5 @@
 import type { OpenGraphMetadata } from './open-graph-metadata';
-import type { TwitterMetaTags } from './twitter';
+import type { TwitterMetaTags } from '../features/twitter/types';
 
 /**
  * Represents metadata for a webpage
