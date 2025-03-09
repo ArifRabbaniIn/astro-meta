@@ -25,7 +25,7 @@ export type OpenGraphBase = {
    *
    * @example `<meta property="og:image" content="https://example.com/rock.jpg">`
    */
-  images: OpenGraphImage[];
+  image: OpenGraphImage;
 
   /**
    * A brief description of the object (up to 300 characters).

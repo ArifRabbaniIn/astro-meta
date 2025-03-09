@@ -8,16 +8,12 @@ type Props = OpenGraphBase;
 <MetaTag name="og:title" content={Astro.props.title} />
 <MetaTag name="og:url" content={Astro.props.url} />
 
-{
-  Astro.props.images?.map(image => (
-    <MetaTag name="og:image:" content={image.url} />
-    <MetaTag name="og:image:secure_url" content={image.secureUrl} />
-    <MetaTag name="og:image:type" content={image.type} />
-    <MetaTag name="og:image:width" content={image.width} />
-    <MetaTag name="og:image:height" content={image.height} />
-    <MetaTag name="og:image:alt" content={image.alt} />
-  ))
-}
+<MetaTag name="og:image" content={Astro.props.image.url} />
+<MetaTag name="og:image:secure_url" content={Astro.props.image.secureUrl} />
+<MetaTag name="og:image:type" content={Astro.props.image.type} />
+<MetaTag name="og:image:width" content={Astro.props.image.width} />
+<MetaTag name="og:image:height" content={Astro.props.image.height} />
+<MetaTag name="og:image:alt" content={Astro.props.image.alt} />
 
 <MetaTag name="og:description" content={Astro.props.description} />
 <MetaTag name="og:site_name" content={Astro.props.siteName} />
