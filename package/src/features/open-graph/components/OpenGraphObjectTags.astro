@@ -4,8 +4,6 @@ import BaseTags from './BaseTags.astro';
 import MetaTag from './MetaTag.astro';
 
 type Props = OpenGraphMeta;
-
-
 ---
 
 <meta property="og:type" content={Astro.props.type} />
@@ -23,9 +21,11 @@ type Props = OpenGraphMeta;
   video={Astro.props.video}
 />
 
-{Astro.props.type === 'profile' ? (
-  <MetaTag name='profile:first_name' content={Astro.props.firstName} />
-  <MetaTag name='profile:last_name' content={Astro.props.lastName} />
-  <MetaTag name='profile:username' content={Astro.props.username} />
-  <MetaTag name='profile:gender' content={Astro.props.gender} />
+{Astro.props.type === 'article' ? (
+  <MetaTag name='article:published_time' content={Astro.props.publishedTime} />
+  <MetaTag name='article:modified_time' content={Astro.props.modifiedTime} />
+  <MetaTag name='article:expiration_time' content={Astro.props.expirationTime} />
+  <MetaTag name='article:author' content={Astro.props.author} />
+  <MetaTag name='article:section' content={Astro.props.section} />
+  <MetaTag name='article:tag' content={Astro.props.tags?.join(', ')} />
 ) : null}
