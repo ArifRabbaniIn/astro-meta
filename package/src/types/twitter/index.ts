@@ -1,7 +1,7 @@
-import type { TwitterAppCard } from './TwitterAppCardCard';
-import type { TwitterPlayerCard } from './TwitterPlayerCard';
-import type { TwitterSummaryCard } from './TwitterSummaryCard';
-import type { TwitterSummaryLargeImageCard } from './TwitterSummaryLargeImageCard';
+import type { TwitterAppCard } from './twitter-app-card';
+import type { TwitterPlayerCard } from './twitter-player-card';
+import type { TwitterSummaryCard } from './twitter-summary-card';
+import type { TwitterSummaryLargeImageCard } from './twitter-summary-large-image-card';
 
 /**
  * Twitter Meta Tags.
