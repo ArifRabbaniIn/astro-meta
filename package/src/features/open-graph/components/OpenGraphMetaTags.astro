@@ -1,13 +1,13 @@
 ---
 import type { OpenGraphMeta } from '../types';
-import BaseMetaTags from './BaseMetaTags.astro';
+import BaseTags from './BaseTags.astro';
 
 type Props = OpenGraphMeta;
 ---
 
 <meta property="og:type" content={Astro.props.type} />
 
-<BaseMetaTags
+<BaseTags
   title={Astro.props.title}
   url={Astro.props.url}
   images={Astro.props.images}
