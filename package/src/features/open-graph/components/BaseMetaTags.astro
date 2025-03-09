@@ -1,0 +1,52 @@
+---
+import type { OpenGraphBase } from '../types/base';
+import OpenGraphMetaTag from './OpenGraphMetaTag.astro';
+
+type Props = OpenGraphBase;
+---
+
+<OpenGraphMetaTag name="og:title" content={Astro.props.title} />
+<OpenGraphMetaTag name="og:url" content={Astro.props.url} />
+
+{
+  Astro.props.images?.map(image => (
+    <OpenGraphMetaTag name="og:image:" content={image.url} />
+    <OpenGraphMetaTag name="og:image:secure_url" content={image.secureUrl} />
+    <OpenGraphMetaTag name="og:image:type" content={image.type} />
+    <OpenGraphMetaTag name="og:image:width" content={image.width} />
+    <OpenGraphMetaTag name="og:image:height" content={image.height} />
+    <OpenGraphMetaTag name="og:image:alt" content={image.alt} />
+  ))
+}
+
+<OpenGraphMetaTag name="og:description" content={Astro.props.description} />
+<OpenGraphMetaTag name="og:site_name" content={Astro.props.siteName} />
+<OpenGraphMetaTag name="og:locale" content={Astro.props.locale} />
+
+{
+  Astro.props.alternateLocales?.map(locale => (
+    <OpenGraphMetaTag name="og:locale:alternate" content={locale} />
+  ))
+}
+
+<OpenGraphMetaTag name="og:determiner" content={Astro.props.determiner} />
+
+{
+  Astro.props.audio ? (
+    <OpenGraphMetaTag name="og:audio" content={Astro.props.audio.url} />
+    <OpenGraphMetaTag name="og:audio:secure_url" content={Astro.props.audio.secureUrl} />
+    <OpenGraphMetaTag name="og:audio:type" content={Astro.props.audio.type} />
+
+  ): null
+}
+
+{
+  Astro.props.video ? (
+    <OpenGraphMetaTag name="og:video" content={Astro.props.video.url} />
+    <OpenGraphMetaTag name="og:video:secure_url" content={Astro.props.video.secureUrl} />
+    <OpenGraphMetaTag name="og:video:type" content={Astro.props.video.type} />
+    <OpenGraphMetaTag name="og:video:width" content={Astro.props.video.width} />
+    <OpenGraphMetaTag name="og:video:height" content={Astro.props.video.height} />
+
+  ): null
+}
