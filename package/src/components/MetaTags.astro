@@ -1,14 +1,14 @@
 ---
+import TwitterMetaTags from '../features/twitter/components/TwitterMetaTags.astro';
 import type { Metadata } from '../types/metadata';
-import BasicMetaTags from './StandardMetaTags.astro';
+import StandardMetaTags from './StandardMetaTags.astro';
 import OpenGraphMetaTags from './open-graph/OpenGraphMetaTags.astro';
-import TwitterMetaTags from './twitter/TwitterMetaTags.astro';
 
 type Props = Metadata;
 
 const { openGraph, twitter, ...rest } = Astro.props;
 ---
 
-<BasicMetaTags {...rest} />
+<StandardMetaTags {...rest} />
 {openGraph ? <OpenGraphMetaTags {...openGraph} /> : null}
 {twitter ? <TwitterMetaTags {...twitter} /> : null}

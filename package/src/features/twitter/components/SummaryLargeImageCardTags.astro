@@ -1,0 +1,22 @@
+---
+import type { TwitterSummaryLargeImageCard } from '../types/summary-large-image-card';
+import TwitterCreator from './utils/TwitterCreator.astro';
+import TwitterCreatorId from './utils/TwitterCreatorId.astro';
+import TwitterDescription from './utils/TwitterDescription.astro';
+import TwitterImage from './utils/TwitterImage.astro';
+import TwitterImageAlt from './utils/TwitterImageAlt.astro';
+import TwitterSite from './utils/TwitterSite.astro';
+import TwitterSiteId from './utils/TwitterSiteId.astro';
+import TwitterTitle from './utils/TwitterTitle.astro';
+
+type Props = TwitterSummaryLargeImageCard;
+---
+
+<TwitterSite content={Astro.props.site} />
+<TwitterSiteId content={Astro.props.siteId} />
+<TwitterCreator content={Astro.props.creator} />
+<TwitterCreatorId content={Astro.props.creatorId} />
+<TwitterTitle content={Astro.props.title} />
+<TwitterDescription content={Astro.props.description} />
+<TwitterImage content={Astro.props.image} />
+<TwitterImageAlt content={Astro.props.imageAlt} />

@@ -7,10 +7,14 @@
     "build": "astro build",
     "preview": "astro preview",
     "format": "prettier --write .",
-    "astro": "astro"
+    "check": "astro check"
   },
   "dependencies": {
     "@codemint/astro-meta": "*",
     "astro": "^5.3.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.4",
+    "typescript": "^5.8.2"
   }
 }

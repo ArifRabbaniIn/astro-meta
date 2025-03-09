@@ -1,5 +1,5 @@
-import type { OpenGraphMetadata } from './open-graph-metadata';
-import type { TwitterMetadata } from './twitter-metadata';
+import type { OpenGraphMeta } from '../features/open-graph/types';
+import type { TwitterCard } from '../features/twitter/types/card';
 
 /**
  * Represents metadata for a webpage
@@ -52,16 +52,6 @@ export type Metadata = {
   keywords?: string[] | undefined;
 
   /**
-   * Open Graph metadata for the webpage
-   */
-  openGraph?: OpenGraphMetadata | undefined;
-
-  /**
-   * Twitter metadata for the webpage
-   */
-  twitter?: TwitterMetadata | undefined;
-
-  /**
    * Author of the webpage
    * @example <meta name="author" content="John Doe" />
    */
@@ -79,4 +69,14 @@ export type Metadata = {
    * @example <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
    */
   sitemapUrl?: string | undefined;
+
+  /**
+   * Open Graph metadata for the webpage
+   */
+  openGraph?: OpenGraphMeta | undefined;
+
+  /**
+   * Twitter card metadata for the webpage
+   */
+  twitter?: TwitterCard | undefined;
 };

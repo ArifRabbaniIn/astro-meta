@@ -1,0 +1,28 @@
+---
+import MetaTag from '../../../components/MetaTag.astro';
+import type { TwitterAppCard } from '../types/app-card';
+import TwitterSite from './utils/TwitterSite.astro';
+
+type Props = TwitterAppCard;
+---
+
+<TwitterSite content={Astro.props.site} />
+<MetaTag name="twitter:app:name:iphone" content={Astro.props.iPhoneAppName} />
+<MetaTag name="twitter:app:id:iphone" content={Astro.props.iPhoneAppId} />
+<MetaTag name="twitter:app:url:iphone" content={Astro.props.iPhoneAppUrl} />
+<MetaTag name="twitter:app:name:ipad" content={Astro.props.iPadAppName} />
+<MetaTag name="twitter:app:id:ipad" content={Astro.props.iPadAppId} />
+<MetaTag name="twitter:app:url:ipad" content={Astro.props.iPadAppUrl} />
+<MetaTag name="twitter:app:country" content={Astro.props.appCountry} />
+<MetaTag
+  name="twitter:app:name:googleplay"
+  content={Astro.props.googlePlayAppName}
+/>
+<MetaTag
+  name="twitter:app:id:googleplay"
+  content={Astro.props.googlePlayAppId}
+/>
+<MetaTag
+  name="twitter:app:url:googleplay"
+  content={Astro.props.googlePlayAppUrl}
+/>

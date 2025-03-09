@@ -1,0 +1,31 @@
+---
+import type { OpenGraphMeta } from '../types';
+import BaseTags from './BaseTags.astro';
+import MetaTag from './MetaTag.astro';
+
+type Props = OpenGraphMeta;
+---
+
+<meta property="og:type" content={Astro.props.type} />
+
+<BaseTags
+  title={Astro.props.title}
+  url={Astro.props.url}
+  images={Astro.props.images}
+  description={Astro.props.description}
+  siteName={Astro.props.siteName}
+  locale={Astro.props.locale}
+  alternateLocales={Astro.props.alternateLocales}
+  determiner={Astro.props.determiner}
+  audio={Astro.props.audio}
+  video={Astro.props.video}
+/>
+
+{Astro.props.type === 'article' ? (
+  <MetaTag name='article:published_time' content={Astro.props.publishedTime} />
+  <MetaTag name='article:modified_time' content={Astro.props.modifiedTime} />
+  <MetaTag name='article:expiration_time' content={Astro.props.expirationTime} />
+  <MetaTag name='article:author' content={Astro.props.author} />
+  <MetaTag name='article:section' content={Astro.props.section} />
+  <MetaTag name='article:tag' content={Astro.props.tags?.join(', ')} />
+) : null}

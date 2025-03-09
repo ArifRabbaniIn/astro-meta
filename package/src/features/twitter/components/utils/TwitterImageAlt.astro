@@ -1,0 +1,9 @@
+---
+import MetaTag from '../../../../components/MetaTag.astro';
+
+type Props = {
+  content?: string | undefined;
+};
+---
+
+<MetaTag name="twitter:image:alt" {...Astro.props} />
