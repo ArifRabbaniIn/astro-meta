@@ -1,5 +1,6 @@
 ---
 import type { Metadata } from '../types/metadata';
+import MetaTag from './MetaTag.astro';
 
 type Props = Omit<Metadata, 'openGraph' | 'twitter'>;
 
@@ -25,22 +26,16 @@ if (follow) {
 ---
 
 <meta {charset} />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="robots" content={robotsTag.join(', ')} />
+<MetaTag name="viewport" content="width=device-width, initial-scale=1.0" />
+<MetaTag name="robots" content={robotsTag.join(', ')} />
 <title>{rest.title}</title>
-{
-  rest.description ?
-    <meta name="description" content={rest.description} />
-  : null
-}
-{
-  rest.keywords ?
-    <meta name="keywords" content={rest.keywords.join(', ')} />
-  : null
-}
+<MetaTag name="description" content={rest.description} />
+<MetaTag name="keywords" content={rest.keywords?.join(', ')} />
 <link rel="canonical" href={canonicalUrl} />
-{rest.author ? <meta name="author" content={rest.author} /> : null}
+<MetaTag name="author" content={rest.author} />
+
 {rest.authorWebsite ? <link rel="author" href={rest.authorWebsite} /> : null}
+
 {
   rest.sitemapUrl ?
     <link rel="sitemap" type="application/xml" href={rest.sitemapUrl} />
