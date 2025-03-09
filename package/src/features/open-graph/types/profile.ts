@@ -10,7 +10,12 @@ export type OpenGraphProfile = OpenGraphBase & {
    * @example `<meta property="og:type" content="profile">`
    */
   type: 'profile';
+} & Profile;
 
+/**
+ * Profile Object
+ */
+export type Profile = {
   /**
    * The person’s first name.
    *
