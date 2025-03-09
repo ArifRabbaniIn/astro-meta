@@ -59,7 +59,7 @@ The above code snippet will add title, description and keywords meta tags to you
 
 ## Advanced Usage
 
-```astro ins={2, 8-23}
+```astro ins={2, 8-27}
 ---
 import { MetaTags } from '@codemint/astro-meta';
 ---
@@ -71,15 +71,19 @@ import { MetaTags } from '@codemint/astro-meta';
       title="My Blog Post Title"
       description="A detailed description of the blog post."
       openGraph={{
+        type: 'website',
         title: 'Open Graph Title',
         description: 'Open Graph Description',
-        image: 'https://example.com/image.jpg',
+        image: {
+          url: 'https://example.com/image.jpg'
+        },
       }}
       twitter={{
+        type: 'summary',
+        site: '@username',
         title: 'Twitter Card Title',
         description: 'Twitter Card Description',
         image: 'https://example.com/twitter-image.jpg',
-        card: 'summary_large_image',
       }}
       canonicalUrl="https://example.com/blog/my-post"
     />
