@@ -6,14 +6,8 @@ import type { TwitterSummaryLargeImageCard } from './summary-large-image-card';
 /**
  * Twitter Meta Tags.
  */
-export type TwitterMetaTags =
+export type TwitterCard =
   | TwitterSummaryCard
   | TwitterSummaryLargeImageCard
   | TwitterAppCard
   | TwitterPlayerCard;
-
-export type TwitterCardType =
-  | 'summary'
-  | 'summary_large_image'
-  | 'app'
-  | 'player';
