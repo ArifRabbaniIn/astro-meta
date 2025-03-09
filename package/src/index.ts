@@ -1,5 +1,5 @@
 import MetaTags from './components/MetaTags.astro';
 
-export * from './type';
+export * from './types/metadata';
 
 export { MetaTags };
