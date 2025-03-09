@@ -1,5 +1,5 @@
+import type { OpenGraphMeta } from '../features/open-graph/types';
 import type { TwitterCard } from '../features/twitter/types/card';
-import type { OpenGraphMetadata } from './open-graph-metadata';
 
 /**
  * Represents metadata for a webpage
@@ -73,10 +73,10 @@ export type Metadata = {
   /**
    * Open Graph metadata for the webpage
    */
-  openGraph?: OpenGraphMetadata | undefined;
+  openGraph?: OpenGraphMeta | undefined;
 
   /**
-   * Twitter metadata for the webpage
+   * Twitter card metadata for the webpage
    */
   twitter?: TwitterCard | undefined;
 };
