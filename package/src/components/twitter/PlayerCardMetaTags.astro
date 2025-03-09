@@ -1,0 +1,23 @@
+---
+import type { TwitterPlayerCard } from '../../types/twitter/TwitterPlayerCard';
+import MetaTag from '../MetaTag.astro';
+import TwitterDescription from './utils/TwitterDescription.astro';
+import TwitterImage from './utils/TwitterImage.astro';
+import TwitterImageAlt from './utils/TwitterImageAlt.astro';
+import TwitterSite from './utils/TwitterSite.astro';
+import TwitterSiteId from './utils/TwitterSiteId.astro';
+import TwitterTitle from './utils/TwitterTitle.astro';
+
+type Props = TwitterPlayerCard;
+---
+
+<TwitterSite content={Astro.props.site} />
+<TwitterSiteId content={Astro.props.siteId} />
+<TwitterTitle content={Astro.props.title} />
+<TwitterDescription content={Astro.props.description} />
+<TwitterImage content={Astro.props.image} />
+<TwitterImageAlt content={Astro.props.imageAlt} />
+<MetaTag name="twitter:player" content={Astro.props.player} />
+<MetaTag name="twitter:player:width" content={Astro.props.playerWidth} />
+<MetaTag name="twitter:player:height" content={Astro.props.playerHeight} />
+<MetaTag name="twitter:player:stream" content={Astro.props.playerStream} />
