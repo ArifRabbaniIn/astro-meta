@@ -1,5 +1,3 @@
-import MetaTags from './components/MetaTags.astro';
-
 export * from './types/metadata';
 
 export * from './features/twitter/types/card';
@@ -17,5 +15,3 @@ export * from './features/open-graph/types/index';
 export * from './features/open-graph/types/object-type';
 export * from './features/open-graph/types/video';
 export * from './features/open-graph/types/website';
-
-export { MetaTags };

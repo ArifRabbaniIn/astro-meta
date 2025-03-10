@@ -25,7 +25,7 @@
   },
   "license": "MIT",
   "type": "module",
-  "main": "./src/index.ts",
+  "main": "./index.ts",
   "files": [
     "src"
   ],
