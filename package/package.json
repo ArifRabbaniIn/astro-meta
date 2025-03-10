@@ -27,7 +27,8 @@
   "type": "module",
   "main": "./index.ts",
   "files": [
-    "src"
+    "src",
+    "index.ts"
   ],
   "publishConfig": {
     "access": "public"
