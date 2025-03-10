@@ -15,6 +15,9 @@ export default defineConfig({
             collapsed: true,
             label: 'Reference',
           },
+          typeDoc: {
+            disableSources: true,
+          },
         }),
       ],
       title: 'Astro Meta',
