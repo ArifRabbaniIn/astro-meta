@@ -7,7 +7,7 @@ export type OpenGraphWebsite = OpenGraphBase & {
   /**
    * The type of object.
    *
-   * @example `<meta property="og:type" content="website">`
+   * @example <meta property="og:type" content="website">
    */
   type: 'website';
 };
