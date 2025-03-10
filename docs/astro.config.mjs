@@ -11,6 +11,10 @@ export default defineConfig({
         starlightTypeDoc({
           entryPoints: ['../package/src/type.ts'],
           tsconfig: '../package/tsconfig.json',
+          sidebar: {
+            collapsed: true,
+            label: 'Reference',
+          },
         }),
       ],
       title: 'Astro Meta',
