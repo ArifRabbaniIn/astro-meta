@@ -59,7 +59,26 @@ import { MetaTags } from '@codemint/astro-meta';
 </html>
 ```
 
-The above code snippet will add title, description and keywords meta tags to your html head section along with some other meta tags like charset, viewport, robots, canonical url etc.
+The above code snippet will generate the following meta tags:
+
+```astro ins={4-13}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>Astro Meta</title>
+    <meta
+      name="description"
+      content="Easily add meta tags to your Astro pages."
+    />
+    <meta name="keywords" content="astro, meta, open graph, twitter, seo" />
+    <link rel="canonical" href="https://example.com/blog/my-post" />
+  </head>
+  <!-- Rest of the page -->
+</html>
+```
 
 ## Advanced Usage
 
@@ -95,6 +114,38 @@ import { MetaTags } from '@codemint/astro-meta';
   <body>
     <h1>My Blog post</h1>
   </body>
+</html>
+```
+
+The above code snippet will generate the following meta tags:
+
+```astro ins={4-18}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="index, follow" />
+    <title>My Blog Post Title</title>
+    <meta
+      name="description"
+      content="A detailed description of the blog post."
+    />
+    <link rel="canonical" href="https://example.com/blog/my-post" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Open Graph Title" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:description" content="Open Graph Description" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@username" />
+    <meta name="twitter:title" content="Twitter Card Title" />
+    <meta name="twitter:description" content="Twitter Card Description" />
+    <meta
+      name="twitter:image"
+      content="https://example.com/twitter-image.jpg"
+    />
+  </head>
+  <!-- Rest of the page -->
 </html>
 ```
 
