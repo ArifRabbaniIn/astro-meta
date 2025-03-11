@@ -39,49 +39,6 @@ import Analytics from '@vercel/analytics/astro';
 
 Import the `MetaTags` component and use it inside your head to add the meta tags.
 
-```astro ins={2, 8-12}
----
-import { MetaTags } from '@codemint/astro-meta';
----
-
-<!doctype html>
-<html lang="en">
-  <head>
-    <MetaTags
-      title="Astro Meta"
-      description="Easily add meta tags to your Astro pages."
-      keywords={['astro', 'meta', 'open graph', 'twitter', 'seo']}
-    />
-  </head>
-  <body>
-    <slot />
-  </body>
-</html>
-```
-
-The above code snippet will generate the following meta tags:
-
-```astro ins={4-13}
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="index, follow" />
-    <title>Astro Meta</title>
-    <meta
-      name="description"
-      content="Easily add meta tags to your Astro pages."
-    />
-    <meta name="keywords" content="astro, meta, open graph, twitter, seo" />
-    <link rel="canonical" href="https://example.com/blog/my-post" />
-  </head>
-  <!-- Rest of the page -->
-</html>
-```
-
-## Advanced Usage
-
 ```astro ins={2, 8-27}
 ---
 import { MetaTags } from '@codemint/astro-meta';
@@ -119,7 +76,7 @@ import { MetaTags } from '@codemint/astro-meta';
 
 The above code snippet will generate the following meta tags:
 
-```astro ins={4-18}
+```astro ins={4-24}
 <!doctype html>
 <html lang="en">
   <head>
