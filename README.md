@@ -16,4 +16,4 @@ This project is licensed under the MIT License.
 
 ### Author
 
-[Arif Rabbani](https://github.com/arabbani)
+[Arif Rabbani](https://github.com/ArifRabbaniIn)

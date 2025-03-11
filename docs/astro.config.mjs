@@ -26,7 +26,7 @@ export default defineConfig({
       lastUpdated: true,
       credits: true,
       social: {
-        github: 'https://github.com/arabbani/astro-meta',
+        github: 'https://github.com/ArifRabbaniIn/astro-meta',
       },
       sidebar: [
         {

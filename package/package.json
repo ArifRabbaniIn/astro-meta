@@ -12,16 +12,16 @@
   ],
   "author": {
     "name": "Arif Rabbani",
-    "url": "https://github.com/arabbani"
+    "url": "https://github.com/ArifRabbaniIn"
   },
   "homepage": "https://astro-meta.vercel.app/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arabbani/astro-meta.git",
+    "url": "git+https://github.com/ArifRabbaniIn/astro-meta.git",
     "directory": "package"
   },
   "bugs": {
-    "url": "https://github.com/arabbani/astro-meta/issues"
+    "url": "https://github.com/ArifRabbaniIn/astro-meta/issues"
   },
   "license": "MIT",
   "type": "module",
